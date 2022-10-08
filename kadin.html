@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KADIN</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/04e4fce483.js" crossorigin="anonymous"></script>
+    <!-- AOS Kütüphanesi -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      
+<style>
+      
+  .card .fs-4{
+        animation: 3s infinite alternate fiyat ;
+  }
+  @keyframes fiyat {
+        0%{
+      color:blue ;
+      
+        
+   }
+        50%{
+          color:rgba(0, 0, 255, 0.406) ;
+
+    }
+
+      100%{
+      color:blue ;
+
+    }
+   
+   }
+   @media screen and (max-width:1100px) {
+    .altmenu .col-6{
+      width: 33.3%;
+     }
+     .altmenu iframe{
+      height: 150px;
+     }
+     .altmenu{
+      margin-left: 7%;
+     }
+        
+   }
+          /* Responsive */
+   
+          @media screen and (max-width:900px) {
+    .list a{  
+        font-size: 12px;
+     }
+     .yanresim{
+      margin-top: 48px;
+     }
+     .containers{
+      width: 90%;
+     }
+     .card-title{
+      font-size: 18px;
+     }
+     .altmenu{
+      margin-left: 5%;
+     } 
+     .giris-sag{
+    text-align: center;
+   }  
+    .input-group{ 
+      width: 250px;
+    }
+ }
+ 
+
+ @media screen and (max-width:700px) {
+    .containers{
+      width: 95%;
+     }
+     .lis{
+      width: 90%;
+      margin: auto;
+     }
+     .buyuk-kart{
+      margin: auto;
+      width: 90%;
+     }
+     .erkek .card{
+      width: 9em!important;
+      margin-bottom: 100px;
+   
+     }
+     
+     .kadin .card-body{
+      height: 170px!important;
+     }
+    .kadin .card-title{
+      font-size: 18px;
+     }
+     .card-img-top{
+      height: 220px!important;
+     }
+   
+     .altmenu{
+      margin-left: auto;
+     }
+     .navbas{
+      height: 100px;
+     }
+     .navbas .active{
+      font-size: 10px;
+     }
+   .arama{
+    width: 200px;
+   }
+   .giris-sag{
+    width: 75px;
+    font-size: 15px;
+    text-align: center;
+   }  
+   .input-group{
+      width: 250px;
+    }
+     
+ }
+ @media screen and (max-width : 500px){
+  .altmenu .col-6{
+      width: 50%;
+     }
+    .input-group{
+      width: 250px;
+    }
+     
+ }
+</style>
+
+
+
+    </head>
+    <body>
+     <!-- üst menü -->
+
+  <nav class="navbar navbas navbar-expand-lg bg-warning bg-opacity-75">
+    <div class="container-fluid">
+
+      <div class="collapse navbar-collapse d-flex justify-content-between mx-5 " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-square-phone"></i>     0850 254 5748</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-at"></i>   info@e-burada.com</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active firsat" aria-current="page" href="#">150 TL'ye Varan İndirim Fırsatını Kaçırma!</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="magazalar.html" target="_blank"><i class="fa-solid fa-store"></i>   Mağazalar</a>
+          
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="siparistakip.html" target="_blank"><i class="fa-solid fa-circle-question"></i>    Sipariş Takip</a>
+          </li>
+        </ul> 
+        
+      </div>
+    </div>
+  </nav>
+
+
+<!-- ana menü -->
+
+  <nav class="navbar navalt navbar-expand-lg bg-danger bg-opacity-50 ">
+    <div class="container-fluid  ">
+      <div class="collapse navbar-collapse d-flex justify-content-between mx-5 " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="anasayfa.html"><img src="img/amblem.jpg" alt="" width="60">   E-BURADA</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <form class="d-flex " role="search" >
+              <input class="form-control arama" type="search" placeholder="ARA" aria-label="Search">
+              <button class="btn mx-1" type="submit">ARA</button>
+            </form>
+          </li>
+        </ul>
+        <ul class="navbar-nav giris-sag ">
+          <li class="nav-item ">
+            <a class="nav-link active bg-warning bg-opacity-50 " aria-current="page" href="giris.html" target="_blank">Giriş</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active bg-warning bg-opacity-50" aria-current="page" href="kayit.html" target="_blank">Kayıt Ol</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link active bg-warning bg-opacity-50" aria-current="page" href="sepet.html" target="_blank">Sepet</a>
+            </li>
+          <li class="nav-item mx-3">
+              <a class="nav-link   active bg-warning bg-opacity-50" aria-current="page" href="ulasin.html" target="_blank">Ulaşın</a>
+          </li>
+          
+        </ul>
+
+        
+      </div>
+    </div>
+  </nav>
+
+
+  
+
+
+
+<!-- acılır menü -->
+
+
+<div class="acilir overflow-hidden d-flex justify-content-around bg-danger containers m-auto bg-opacity-50 mt-5"> <!-- navbar -->
+ 
+  <div class="bas"><!--  dropdown -->
+
+    <button class="basbtn">KADIN
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="bas-ic">
+
+      <div class="sira">
+        <div class="sutun">
+          <h3>GİYİM</h3>
+          <hr>
+          <a href="kadin.html" target="_blank">* Elbise</a>
+          <a href="kadin.html" target="_blank">* Tişört</a>
+          <a href="kadin.html" target="_blank">* Pantolon</a>
+        </div>
+        <div class="sutun">
+          <h3>AYAKKABI</h3>
+          <hr>
+          <a href="kadin.html" target="_blank">* Spor Ayakkabı</a>
+          <a href="kadin.html" target="_blank">* Topuklu Ayakkabı</a>
+          <a href="kadin.html" target="_blank">* Terlik</a>
+        </div>
+        <div class="sutun">
+          <h3>KOZMETİK</h3>
+          <hr>
+          <a href="kadin.html" target="_blank">* Makyaj Malzemeleri</a>
+          <a href="kadin.html" target="_blank">* Parfüm Çeşitleri</a>
+          <a href="kadin.html" target="_blank">* Duş Malzemeleri</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="bas"><!--  dropdown -->
+
+    <button class="basbtn">ERKEK
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="bas-ic">
+      
+      <div class="sira">
+        <div class="sutun">
+          <h3>GİYİM</h3>
+          <hr>
+          <a href="erkek.html" target="_blank">* Tişört</a>
+          <a href="erkek.html" target="_blank">* Gömlek</a>
+          <a href="erkek.html" target="_blank">* Pantolon</a>
+        </div>
+        <div class="sutun">
+          <h3>AYAKKABI</h3>
+          <hr>
+          <a href="erkek.html" target="_blank">* Spor Ayakkabı</a>
+          <a href="erkek.html" target="_blank">* Klasik Ayakkabı</a>
+          <a href="erkek.html" target="_blank">* Krampon</a>
+        </div>
+        <div class="sutun">
+          <h3>AKSESUAR</h3>
+          <hr>
+          <a href="erkek.html" target="_blank">* Saat</a>
+          <a href="erkek.html" target="_blank">* Bileklik</a>
+          <a href="erkek.html" target="_blank">* Kemer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="bas"><!--  dropdown -->
+
+    <button class="basbtn">ÇOÇUK
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="bas-ic">
+      
+      <div class="sira">
+        <div class="sutun">
+          <h3>BEBEK</h3>
+          <hr>
+          <a href="cocuk.html" target="_blank">* Bebek Takımları</a>
+          <a href="cocuk.html" target="_blank">* Yenidoğan Kıyafetleri</a>
+          <a href="cocuk.html" target="_blank">* Ayakkabı</a>
+        </div>
+        <div class="sutun">
+          <h3>KIZ ÇOCUK</h3>
+          <hr>
+          <a href="cocuk.html" target="_blank">* Elbise</a>
+          <a href="cocuk.html" target="_blank">* Ayakkabı</a>
+          <a href="cocuk.html" target="_blank">* Şort</a>
+        </div>
+        <div class="sutun">
+          <h3>ERKEK ÇOCUK</h3>
+          <hr>
+          <a href="cocuk.html" target="_blank">* Tişört</a>
+          <a href="cocuk.html" target="_blank">* Ayakkabı</a>
+          <a href="cocuk.html" target="_blank">* Şort</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bas"><!--  dropdown -->
+
+    <button class="basbtn">MARKALAR
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="bas-ic">
+      
+      <div class="sira">
+        <div class="sutun">
+          <a href="#">* Adidas</a>
+          <a href="#">* Hummel</a>
+          <a href="#">* Nike</a>
+          <a href="#">* Mavi</a>
+        </div>
+        <div class="sutun">
+          <a href="#">* Koton</a>
+          <a href="#">* Puma</a>
+          <a href="#">* Lacoste</a>
+          <a href="#">* Pull&Bear</a>
+        </div>
+        <div class="sutun">
+          <a href="#">* Zara</a>
+          <a href="#">* Pierre Cardin</a>
+          <a href="#">* Civil Boys</a>
+          <a href="#">* Poleris</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- LİSTELER VE CARD -->
+
+<!-- LİSTE -->
+
+<div class="containers liste m-auto ">
+  <div class="row mt-2">
+
+    <div class="col-3 lh-lg fs-3 fst-italic lis">
+      <h3 class="mb-2 text-center text-black fs-1">KATEGORİ</h3>
+      
+      <ul class="list-group list">
+        <li class="list-group-item d-flex justify-content-between align-items-center  bg-danger bg-opacity-50">
+         <a href="#" class="text-decoration-none text-black">KADIN</a> 
+          <button class="badge text-black ">+</button>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+         <a href="#" class="text-decoration-none text-black"> ERKEK</a>
+          <button class="badge text-black ">+</button>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+         <a href="#" class="text-decoration-none text-black">  ÇOÇUK</a>
+          <button class="badge text-black ">+</button>
+        </li>
+ 
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+         <a href="#" class="text-decoration-none text-black">  BAHAR GRUBU</a>
+          <button class="badge text-black ">+</button>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+          <a href="#" class="text-decoration-none text-black"> YAZ GRUBU</a>
+          <button class="badge text-black ">+</button>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+        <a href="#" class="text-decoration-none text-black"> KIŞ GRUBU</a>
+          <button class="badge text-black ">+</button>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center bg-danger bg-opacity-50">
+          <a href="#" class="text-decoration-none text-black"> SONBAHAR GRUBU</a>
+          <button class="badge text-black ">+</button>
+        </li>
+
+
+      </ul>
+      <div class="col yanresim">
+        <div id="carouselExampleControls" class="carousel slide"  data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/erkek/sol.webp" class="d-block " alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/erkek/sol2.jpg" class="d-block " alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="img/erkek/sol3.jpg" class="d-block " alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </div>
+     
+
+    </div>
+
+
+  <!-- CARDS -->
+
+    <div class="col-9 mt-5 buyuk-kart" data-aos="fade-down">
+      <div class="card mb-3">
+        <a href="#"><img src="img/kadın/ana.jpg" class="card-img-top " alt="..."></a>
+        <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> KOZMETİK</h5></a>
+          
+        </div>
+      </div>  
+
+    
+    
+
+
+    <div class="card mb-3" data-aos="fade-right">
+      <a href="#"><img src="img/kadın/ana2.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body bg-danger bg-opacity-25">
+        <a href="" class="text-decoration-none text-black"><h5 class="card-title">GİYİM</h5></a>
+      </div>
+    </div>  
+
+
+
+
+  <div class="card mb-3 mx-1" data-aos="fade-up">
+    <a href="#"><img src="img/kadın/ana1.jpg" class="card-img-top" alt="..."></a>
+    <div class="card-body bg-danger bg-opacity-25">
+      <a href="" class="text-decoration-none text-black"><h5 class="card-title"> AYAKKABI</h5></a>
+    </div>
+  </div>  
+
+  </div> 
+  </div>
+</div>
+
+
+
+<!-- CARS KÜÇÜK -->
+<div class="containers liste m-auto ">
+  <div class="row mt-5 kadin">
+
+    <div class="col-4 mb-5">
+
+        <div class="card " data-aos="fade-up">
+          <a href="#"><img src="img/kadın/elbise.jpg" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+            <a href="" class="text-decoration-none text-black " ><h5 class="card-title"> ELBİSE</h5></a>
+            <a href="" class="text-decoration-none text-primary  opacity-75"><h5 class="card-title fs-4 fiyat">235.00 TL</h5></a>
+            <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+          </div>
+        </div> 
+
+        <div class="card mt-4 " data-aos="fade-up">
+          <a href="#"><img src="img/kadın/elbise1.jpg" height="550" class="card-img-top" alt="..."></a>
+            <div class="card-body bg-danger bg-opacity-25">
+            <a href="" class="text-decoration-none text-black"><h5 class="card-title"> ELBİSE</h5></a>
+            <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">169.99 TL</h5></a>
+            <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+          </div>
+        </div> 
+
+        <div class="card mt-4 " data-aos="fade-up">
+          <a href="#"><img src="img/kadın/sporayakakbı.webp" height="550" class="card-img-top" alt="..."></a>
+        <div class="card-body bg-danger bg-opacity-25">
+            <a href="" class="text-decoration-none text-black"><h5 class="card-title"> SNEAKER</h5></a>
+            <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">289.00 TL</h5></a>
+            <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+          </div>
+        </div> 
+    </div>
+
+
+    <div class="col-4 mb-5">
+
+      <div class="card  " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/tişört.jpg" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TİŞÖRT</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">84.90 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+      <div class="card mt-4" data-aos="fade-up">
+        <a href="#"><img src="img/kadın/tişört1.jpg" height="550" class="card-img-top" alt="..."></a>
+        <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TİŞÖRT</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">105.00 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+      <div class="card mt-4  " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/topuklu.webp" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TOPUKLU </h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">359.00 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+    </div>
+
+
+
+    <div class="col-4 mb5">
+
+      <div class="card  " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/pantalon1.jpg" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> PANTOLON</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">199.99 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+
+      <div class="card mt-4 " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/pantolan.jpg" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> PANTOLON</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">129.90 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+
+      <div class="card mt-4 " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/terlik.jpg" height="550" class="card-img-top" alt="..."></a>
+       <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TERLİK</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">195.00 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+
+    </div>
+    
+    <div class="col-4">
+
+    
+
+      <div class="card " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/sporayakakbı1.webp" height="550" class="card-img-top" alt="..."></a>
+         <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title"> SNEAKER</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">529.90 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+    
+
+      <div class="card mt-4 " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/makyaj.webp" height="550" class="card-img-top" alt="..."></a>
+        <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title">  KOZMETİK</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">80.00 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+    
+
+      <div class="card mt-4 " data-aos="fade-up">
+        <a href="#"><img src="img/kadın/makyaj1.jpg" height="550" class="card-img-top" alt="..."></a>
+         <div class="card-body bg-danger bg-opacity-25">
+          <a href="" class="text-decoration-none text-black"><h5 class="card-title">  KOZMETİK</h5></a>
+           <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">67.50 TL</h5></a>
+          <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+        </div>
+      </div> 
+    </div>
+    
+
+        <div class="col-4 mb-5">
+    
+          <div class="card  " data-aos="fade-up">
+            <a href="#"><img src="img/kadın/topuklu1.jpg" height="550" class="card-img-top" alt="..."></a>
+             <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TOPUKLU </h5></a>
+               <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">405.00 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+          <div class="card mt-4" data-aos="fade-up">
+            <a href="#"><img src="img/kadın/parfüm.jpg" height="550" class="card-img-top" alt="..."></a>
+           <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> PARFÜM</h5></a>
+               <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">299.99 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+          <div class="card mt-4  " data-aos="fade-up">
+            <a href="#"><img src="img/kadın/parfüm1.jpg" height="550" class="card-img-top" alt="..."></a>
+              <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> PARFÜM </h5></a>
+               <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">349.90 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+        </div>
+    
+    
+
+        <div class="col-4 mb5">
+    
+          <div class="card  " data-aos="fade-up">
+            <a href="#"><img src="img/kadın/terlil1.webp" height="550" class="card-img-top" alt="..."></a>
+          <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> TERLİK</h5></a>
+              <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">225.00 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+    
+          <div class="card mt-4 " data-aos="fade-up">
+            <a href="#"><img src="img/kadın/duşjel.jpg" height="550" class="card-img-top" alt="..."></a>
+             <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> DUŞ JEL</h5></a>
+              <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">44.99 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+    
+          <div class="card mt-4 " data-aos="fade-up">
+            <a href="#"><img src="img/kadın/duşjel1.jpg" height="550" class="card-img-top" alt="..."></a>
+             <div class="card-body bg-danger bg-opacity-25">
+              <a href="" class="text-decoration-none text-black"><h5 class="card-title"> DUŞ JEL</h5></a>
+              <a href="" class="text-decoration-none text-primary opacity-75"><h5 class="card-title fs-4">35.00 TL</h5></a>
+              <button type="button" class="btn btn-outline-danger">Sepete Ekle</button>
+            </div>
+          </div> 
+    
+        </div>
+  </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<footer class="bg-danger bg-opacity-50 text-dark">
+  <div class="container-fluid altmenu ">
+  
+   <div class="row mx-5 mb-5">
+   
+       
+   
+   <div class="col-lg-2 col-6 mt-3">
+    <h3 class="text-light">E-BURADA</h3>
+    <p>E-BURADA olarak hem yurtiçi hem de yurtdışı olarak uzun yıllardır Türkiye de hizmet vermekteyiz.Amacımız yurtdışında da aktif hale gelerek depolarımızı oralara taşımaktır.</p>
+   </div>
+   
+   <div class="col-lg-2 col-6 mt-3">
+    
+     <a href="kadin.html"><img  class="footer-foto" src="img/Footer/kadın.webp" alt="" ></a>
+     <p class="mt-2 text-light"> KADIN GİYİM</p>
+   </div>
+   
+   <div class="col-lg-2 col-6 mt-3">
+    
+     <a href="erkek.html"><img  class="footer-foto" src="img/Footer/erkek.webp" alt="" ></a>
+     <p class="mt-2 text-light"> ERKEK GİYİM</p>
+   </div>
+   <div class="col-lg-2 col-6 mt-3">
+    
+     <a href="cocuk.html"><img  class="footer-foto" src="img/Footer/cocuk.webp" alt="" ></a>
+     <p class="mt-2 text-light"> ÇOÇUK GİYİM</p>
+   </div>
+   
+   <div class="col-lg-2 col-6 mt-3">
+    
+     <a href="magazalar.html"><img  class="footer-foto" src="img/Footer/magaza.jpg" alt="" ></a>
+     <p class="mt-2 text-light"> MAĞAZALARIMIZ</p>
+   </div>
+   
+   <div class="col-lg-2 col-6 mt-3">
+    
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.41217566912!2d27.08938501533799!3d38.47813007963743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd9e3318c3c8f%3A0xdce0474ce57ebf4a!2sTrendyol%20Express!5e0!3m2!1str!2str!4v1657007101225!5m2!1str!2str" width="150" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+   </div>
+   
+   
+   
+   <!-- row alt kısım -->
+     <div class="row mt-3 mx-5">
+       
+       <div class="col-lg-2 col-6">
+         <h5 class="text-light">Kampanyalar</h5>
+           <ul class="navbar-nav">
+               <li class="nav-item mb-2"><a href="" class="nav-link">Yardım Merkezi</a></li>
+               <li class="nav-item mb-2"><a href="" class="nav-link">İş imkanları</a></li>
+               <li class="nav-item mb-2"><a href="" class="nav-link">Gizlilik</a></li>
+               <li class="nav-item mb-2"><a href="" class="nav-link">Hız Testi</a></li>
+           </ul>
+       </div>
+   
+       <div class="col-lg-2 col-6">
+         <h5 class="text-light" >Mobil Uygulamalar</h5>
+         <ul class="navbar-nav">
+           <li class="nav-item mb-2"><a href="" class="nav-link"> <img src="img/Footer/app-store-2.svg" alt="" width="100"> </a></li>
+           <li class="nav-item mb-2"><a href="" class="nav-link"><img src="img/Footer/google-play@3x.png" alt="" width="100"></a></li>
+           <li class="nav-item mb-2"><a href="" class="nav-link"><img src="img/Footer/huawei-app-gallery@3x.png" alt="" width="100"></a></li>
+       
+       </ul>
+       </div>
+   
+       <div class="col-lg-2 col-6">
+         <h5 class="text-light">Sosyal Medya</h5>
+           <ul class="navbar-nav mx-3  text-black">
+               <li class="nav-item mb-2"><a href="" class="nav-link"><i class="fa-brands fa-facebook fs-4 "></i></a></li>
+               <li class="nav-item mb-2"><a href="" class="nav-link"><i class="fa-brands fa-instagram fs-4 " ></i></a></li>
+               <li class="nav-item mb-2"><a href="" class="nav-link"><i class="fa-brands fa-twitter fs-4 "></i></a></li>
+             
+           </ul>
+       </div>
+     
+       <div class="col-lg-2 col-6">
+        <h5 class="text-light">İletişim </h5>
+        <b>Adres:</b> 
+        <p>Modacılar Mahallesi </p>
+        <p>Kazancı Plaza No:8</p>
+        <p>İzmir/Konak</p>
+        <b>Müşteri Hizmetleri:</b>
+        <p>Tel:0850 254 57 48</p>
+        
+      </div>
+   
+       <div class="col-lg-4 col-6">
+        <h5 class="text-light">E-Bülten</h5>
+        <p>Kampanyalardan haberdar olmak için iletişimde kalın. </p>
+   
+        <div class="input-group">
+         <input type="email" class="form-control" placeholder="ahmetarki12@gmail.com" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+         <button class="btn btn-light btn-outline-warning" type="button" id="inputGroupFileAddon04"><i class="fa-solid fa-forward"></i></button>
+       </div>
+       <br>
+       <p><input type="checkbox"><a href="https://www.ayakkabidunyasi.com.tr/t/gizlilik-politikasi" target="_blank">Gizlilik Sözleşmesini</a> okudum ve kabul ediyorum.</p>
+     </div>
+   </div>
+   
+  
+   </div>
+ </footer>
+ 
+ 
+ 
+
+
+ <script>
+  AOS.init();
+</script>
+</body>
+</html>
